@@ -11,6 +11,8 @@ Doc Writer <doc@example.com>
 
 An example of a basic https://asciidoc.org[AsciiDoc] document prepared by {author}.
 
+More syntax https://docs.asciidoctor.org/asciidoc/latest/document-structure/[here]
+
 == Introduction
 
 A paragraph followed by an unordered list{empty}footnote:[AsciiDoc supports unordered, ordered, and description lists.] with square bullets.footnote:[You may choose from square, disc, and circle for the bullet style.]
