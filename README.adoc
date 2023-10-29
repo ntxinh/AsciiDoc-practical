@@ -17,8 +17,8 @@ More syntax https://docs.asciidoctor.org/asciidoc/latest/document-structure/[her
 
 A paragraph followed by an unordered list{empty}footnote:[AsciiDoc supports unordered, ordered, and description lists.] with square bullets.footnote:[You may choose from square, disc, and circle for the bullet style.]
 
-. link:vi/README.adoc[Introduction]
-. link:vi/SUMMARY.adoc[Summary]
+. link:vi/README.html[Introduction]
+. link:vi/SUMMARY.html[Summary]
 
 [square]
 * item 1
