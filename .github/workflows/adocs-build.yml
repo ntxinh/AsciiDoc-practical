@@ -27,10 +27,17 @@ jobs:
       uses: tonynv/asciidoctor-action@master
       with:
         # program: "asciidoctor -D docs --backend=html5 -o index.html docs/index.adoc"
-        program: "asciidoctor -D $PWD --backend=html5 **/*.adoc"
+        # program: "asciidoctor -D $PWD --backend=html5 **/*.adoc"
+        program: "asciidoctor --backend=html5 **/*.adoc"
 
     - name: Print execution time
-      run: echo "Time ${{ steps.adocbuild.outputs.time }}"
+      run: echo "Time ${{ steps.adoc_build.outputs.time }}"
+
+    - name: Organize files
+      id: organize
+      if: success()
+      run: |
+        ls -a
 
     # - name: Deploy docs to ghpages
     #   uses: peaceiris/actions-gh-pages@v3
