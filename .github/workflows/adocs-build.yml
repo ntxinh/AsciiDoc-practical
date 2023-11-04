@@ -3,8 +3,8 @@ name: adocs Build and GitHub Pages Publish
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  # push:
-  #   branches: [ main ]
+  push:
+    branches: [ main ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
@@ -26,7 +26,8 @@ jobs:
       id: adocbuild
       uses: tonynv/asciidoctor-action@master
       with:
-          program: "asciidoctor -D docs --backend=html5 -o index.html docs/index.adoc"
+        # program: "asciidoctor -D docs --backend=html5 -o index.html docs/index.adoc"
+        program: "asciidoctor -D $PWD --backend=html5 **/*.adoc"
 
     - name: Print execution time
       run: echo "Time ${{ steps.adocbuild.outputs.time }}"
