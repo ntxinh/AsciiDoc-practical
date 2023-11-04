@@ -29,18 +29,28 @@ jobs:
         # https://docs.asciidoctor.org/asciidoctor/latest/cli/man1/asciidoctor/#options
         # program: "asciidoctor -D docs --backend=html5 -o index.html docs/index.adoc"
         # program: "asciidoctor -D $PWD --backend=html5 **/*.adoc"
-        program: "asciidoctor **/*.adoc"
+        # program: "asciidoctor **/*.adoc"
+        program: |
+          asciidoctor -D $PWD -o README.html README.adoc
+          asciidoctor -D docs -o index.html docs/index.adoc
+          asciidoctor -D vi -o README.html vi/README.adoc
+          asciidoctor -D vi -o SUMMARY.html vi/SUMMARY.adoc
+          asciidoctor -D vi/thing_01 -o README.html vi/thing_01/README.adoc
 
-    - name: Print execution time
-      run: echo "Time ${{ steps.adoc_build.outputs.time }}"
+    # - name: Print execution time
+    #   run: echo "Time ${{ steps.adocbuild.outputs.time }}"
 
     - name: Organize files
       id: organize
       if: success()
       run: |
+        echo "ls -a"
         ls -a
+        echo "ls docs"
         ls docs
+        echo "ls vi"
         ls vi
+        echo "ls vi/thing_01"
         ls vi/thing_01
 
     # - name: Deploy docs to ghpages
