@@ -1,2 +1,0 @@
-= Index adoc
-ntxinh <ntxinh@example.com>
