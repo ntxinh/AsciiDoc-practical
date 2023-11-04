@@ -26,9 +26,10 @@ jobs:
       id: adocbuild
       uses: tonynv/asciidoctor-action@master
       with:
+        # https://docs.asciidoctor.org/asciidoctor/latest/cli/man1/asciidoctor/#options
         # program: "asciidoctor -D docs --backend=html5 -o index.html docs/index.adoc"
         # program: "asciidoctor -D $PWD --backend=html5 **/*.adoc"
-        program: "asciidoctor --backend=html5 **/*.adoc"
+        program: "asciidoctor **/*.adoc"
 
     - name: Print execution time
       run: echo "Time ${{ steps.adoc_build.outputs.time }}"
@@ -38,6 +39,9 @@ jobs:
       if: success()
       run: |
         ls -a
+        ls docs
+        ls vi
+        ls vi/thing_01
 
     # - name: Deploy docs to ghpages
     #   uses: peaceiris/actions-gh-pages@v3
