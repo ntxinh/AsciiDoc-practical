@@ -37,6 +37,10 @@ jobs:
           asciidoctor -D vi -o README.html vi/README.adoc
           asciidoctor -D vi -o SUMMARY.html vi/SUMMARY.adoc
           asciidoctor -D vi/thing_01 -o README.html vi/thing_01/README.adoc
+          asciidoctor -D vi/thing_02 -o README.html vi/thing_02/README.adoc
+          asciidoctor -D vi/thing_03 -o README.html vi/thing_03/README.adoc
+          asciidoctor -D vi/thing_04 -o README.html vi/thing_04/README.adoc
+          asciidoctor -D vi/thing_05 -o README.html vi/thing_05/README.adoc
 
     # - name: Print execution time
     #   run: echo "Time ${{ steps.adocbuild.outputs.time }}"

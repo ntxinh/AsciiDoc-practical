@@ -1,5 +1,5 @@
 . link:index.html[Index]
 . link:README.html[README]
-. link:vi/README.html[Introduction]
-. link:vi/SUMMARY.html[Summary]
-. link:vi/thing_01/README.html[README]
+. link:docs/index.html[docs/index]
+. link:vi/README.html[vi/README]
+. link:vi/SUMMARY.html[vi/Summary]
