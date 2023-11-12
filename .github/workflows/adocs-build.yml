@@ -49,13 +49,23 @@ jobs:
       id: organize
       if: success()
       run: |
-        echo "ls -a"
+        echo "----- ls -a"
         ls -a
-        echo "ls docs"
+        echo "----- ls docs"
         ls docs
-        echo "ls vi"
+        echo "----- ls vi"
         ls vi
-        echo "ls vi/thing_01"
+        echo "----- ls vi/thing_01"
+        ls vi/thing_01
+        echo "----- rm **/*.adoc"
+        rm **/*.adoc
+        echo "----- ls -a"
+        ls -a
+        echo "----- ls docs"
+        ls docs
+        echo "----- ls vi"
+        ls vi
+        echo "----- ls vi/thing_01"
         ls vi/thing_01
 
     # - name: Deploy docs to ghpages
