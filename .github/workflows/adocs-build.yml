@@ -57,8 +57,10 @@ jobs:
         ls vi
         echo "----- ls vi/thing_01"
         ls vi/thing_01
-        echo "----- rm **/*.adoc"
+        echo "----- rm adoc"
+        rm *.adoc
         rm **/*.adoc
+        rm **/**/*.adoc
         echo "----- ls -a"
         ls -a
         echo "----- ls docs"
